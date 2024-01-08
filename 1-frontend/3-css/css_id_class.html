@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            /* id选择器 */
+            /* #[idName]{...:...;} */
+            #para1{
+                /* text-align: center; */
+                color: red;
+            }
+            /* Ctrl+/ */
+            /* class选择器 */
+            /* .[className]{...:...;} */
+            .center{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="para1">Hello World!</p>
+        <h1 id="para1">一级标题</h1>
+        <p>此段落不受css影响</p>
+        <div id="para1">
+            <p>段落(居中)</p>
+            <h1>一级标题(居中)</h1>
+        </div>
+    </body>
+</html>
+
+<!-- css选择器: h1,p属性, className,idName -->
+<!-- h1{color:red;} -->
+<!-- .[className]{color:red;} -->
+<!-- #[idName]{color:red;} -->
+<!-- div:包裹的内容并没有变化,但是可以使用div指定class or id -->
