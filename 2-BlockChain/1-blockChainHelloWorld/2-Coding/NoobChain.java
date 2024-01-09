@@ -2,6 +2,8 @@ import java.util.ArrayList;
 
 import com.google.gson.GsonBuilder;
 
+//12e
+
 public class NoobChain {
 
 	public static ArrayList<Block> blockchain = new ArrayList<Block>(); 
