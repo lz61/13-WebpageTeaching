@@ -6,6 +6,7 @@ public class Block {
     public String data; // stores a single message
     private long timestamp; // number of milliseconds since 1970/1/1
 
+
     // f(current data,previous data)=current hash
 
     // Block Constructor
