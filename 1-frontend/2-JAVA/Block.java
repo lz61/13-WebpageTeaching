@@ -10,13 +10,22 @@ public class Block {
         this.data = data;
         this.previousHash = previousHash;
         this.timeStamp = new Date().getTime();
+        this.hash = calculateHash();
+    }
 
-        //currenthash = f(data, previoushash)
+    public String calculateHash() {
+        String calculatedhash = StringUtil.applySha256( 
+                previousHash +
+                Long.toString(timeStamp) +
+                data 
+                );
+        return calculatedhash;
     }
 
     public static void main(String[] args) {
-        Block block = new Block("Shostakovich", "6x7900");
+        Block block = new Block("Glazunov", "6x7900");
         System.out.println(block.data);
         System.out.println(block.previousHash);
     }
+
 }
