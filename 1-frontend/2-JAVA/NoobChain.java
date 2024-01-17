@@ -4,8 +4,31 @@ import com.google.gson.GsonBuilder;
 public class NoobChain {
 
     public static ArrayList<Block> blockchain = new ArrayList<Block>(); 
+    public static int difficulty = 5;
 
-	public static void main(String[] args) {	
+    public static void main(String[] args) {	
+		//add our blocks to the blockchain ArrayList:
+		
+		blockchain.add(new Block("Mahler", "0"));
+		System.out.println("Trying to Mine block 1... ");
+		blockchain.get(0).mineBlock(difficulty);
+		
+		blockchain.add(new Block("Wagner",blockchain.get(blockchain.size()-1).hash));
+		System.out.println("Trying to Mine block 2... ");
+		blockchain.get(1).mineBlock(difficulty);
+		
+		blockchain.add(new Block("Bruckner",blockchain.get(blockchain.size()-1).hash));
+		System.out.println("Trying to Mine block 3... ");
+		blockchain.get(2).mineBlock(difficulty);	
+		
+		System.out.println("\nBlockchain is Valid: " + isChainValid());
+		
+		String blockchainJson = new GsonBuilder().setPrettyPrinting().create().toJson(blockchain);
+		System.out.println("\nThe block chain: ");
+		System.out.println(blockchainJson);
+	}
+
+	public static void mainDay1(String[] args) {	
 		//add our blocks to the blockchain ArrayList:
 		blockchain.add(new Block("Shostakovich", "0"));		
 		blockchain.add(new Block("Prokofiev", blockchain.get(blockchain.size()-1).hash)); 
