@@ -33,6 +33,7 @@ public class Wallet {
 			System.out.println("#Not Enough funds to send transaction. Transaction Discarded.");
 			return null;
 		}
+		
         //create array list of inputs
 		ArrayList<TransactionInput> inputs = new ArrayList<TransactionInput>();
     
