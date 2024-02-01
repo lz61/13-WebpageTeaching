@@ -16,3 +16,39 @@ Part2: https://medium.com/programmers-blockchain/creating-your-first-blockchain-
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

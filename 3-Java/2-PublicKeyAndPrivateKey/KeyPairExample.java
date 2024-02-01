@@ -7,7 +7,7 @@ public class KeyPairExample {
     public static void main(String[] args) {
         // Try to encrypt and decrypt
         try {
-            // Generate key pair
+            // 1.Generate key pair(私钥+公钥)
             KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
             keyPairGenerator.initialize(2048); // You can choose a different key size
             KeyPair keyPair = keyPairGenerator.generateKeyPair();
