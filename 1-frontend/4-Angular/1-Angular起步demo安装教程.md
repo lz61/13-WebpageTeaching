@@ -1,12 +1,96 @@
-前置条件: 安装好了16.14.2的node版本
+# 0. 安装node16.14.2, npm8.5.0
+
+如果下载过慢,可以设置镜像源:
+
+```
+# 腾讯源:
+npm config set registry http://mirrors.cloud.tencent.com/npm/
+# 不要用淘宝源(不靠谱):
+npm config set registry https://registry.npm.taobao.org
+```
+
+## 0.1 windows version
+
+LTS-Long-Term Support
+
+1.**Download Node.js Installer:**
+
+https://nodejs.org/en/blog/release/v16.14.2
+
+2.**Verify Installation:**
+
+After the installation is complete, open a new terminal or command prompt and run the following commands to verify that Node.js and npm (Node Package Manager) are installed:
+
+```
+node -v
+npm -v
+```
+
+## 0.2 Linux version
+
+无外网: Workaround: 下载.tar.gz文件,解压到对应文件夹,再将nvm挂载到系统路径.
+
+https://github.com/nvm-sh/nvm/releases
+
+nvm&rarr;node和npm&rarr;Angular/CLI
+
+如果有外网:
+
+clash/ v2ray for linux?
+
+Reference: chatGPT
+
+1.Install nvm:
+
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+curl -o- https://gitee.com/mirrors/nvm/raw/v0.38.0/install.sh | bash
+```
+
+2.Install Node.js 16.14.2:
+
+```
+nvm install 16.14.2
+```
+
+3.Set Default Node.js Version:
+
+If you want to set Node.js version 16.14.2 as the default version, you can use:
+
+```
+nvm alias default 16.14.2
+```
+
+4.Verify node installation:
+
+```
+node -v // should be 16.14.2
+npm -v // should be 8.5.0
+```
+
+5.Install Angular CLI:
+
+```
+npm install -g @angular/cli@16.0.1
+```
+
+6.Verify Angular Installation:
+
+```
+ng version
+```
+
+
 
 # 1. Angular起步
+
+(我的远程Linux实在太拉跨了)
 
 ## 1.1 安装Angular CLI,版本:16.0.1
 
 ### 1.1.1 Angular CLI简述
 
-Angular脚手架,以便一步安装并部署
+Angular 可执行程序,Angular脚手架,以便一步安装并部署
 
 ### 1.1.2 安装CLI的cmd命令
 
@@ -22,7 +106,7 @@ npm install -g @angular/cli@16.0.1
 
 在本机上安装angular脚手架，以便在之后自己动手搭建项目。
 
-
+最好有VPN再装.
 
 ### 1.1.3 检验安装是否成功
 
@@ -40,17 +124,9 @@ ng version
 
 只有16.14.2的node版本可以,18.16.0的node版本无法正常下载并安装node-CLI
 
-## 1.2-部署项目demo
+## 1.2 部署项目demo
 
-### 1.1.1-先下载[项目demo](https://github.com/2020-web/Lab2.1_Code-Angular_Demo)。
-
-1.1.1.1去github下
-
-1.1.1.2复制项目SSH地址
-
-1.1.1.3git clone即可
-
-
+### 1.1.1 下载[项目demo](https://github.com/2020-web/Lab2.1_Code-Angular_Demo)
 
 ### 1.1.2 准备电脑运行环境，并求神拜佛！！！最关键的一步！！！
 
@@ -89,7 +165,7 @@ npm install
 如果有ERR而非WARNING，必须回到步骤1.1.2，仔细准备电脑运行环境，并删除当前文件夹下的所有
 
 ```
-node_modules
+node_modules内
 ```
 
 文件，实在不行直接回到步骤1.1.1重新开始战斗！！！
@@ -119,11 +195,15 @@ http://localhost:4200/
 
 ![image-20230511165331779](Pics/image-20230511165331779.png)
 
-### 1.1.7-软件注释
+## 1.3 网页说明(结合源代码)
 
-在这个初始应用程序中，定义了一个带有带有顶栏的框架（包含商店名称和结账图标）
+### 1.3.1 顶层
 
-以及一个产品列表的标题（它将用来自应用中的数据填充并动态更新产品列表）。
+My Store + Checkout图标
+
+中层: Products
+
+对应代码:
 
 ### 1.1.8-接下来阅读的文档
 
@@ -163,3 +243,12 @@ angular官方网站教程-教你做一个简单商业网站
 
 官网教程：https://angular.io/start
 
+
+
+
+
+# 5. npm包管理器
+
+app.module.ts
+
+控制整个app包的导入和使用
