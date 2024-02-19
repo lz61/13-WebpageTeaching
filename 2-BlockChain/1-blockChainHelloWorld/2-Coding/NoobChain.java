@@ -21,6 +21,10 @@ public class NoobChain {
 	}
 
 	public static void main(String[] args) {
+		mainForDay2();
+	}
+
+	public static void mainForDay3(){
 		// add our blocks to the blockchain ArrayList:
 		Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider()); // Setup Bouncey castle as a
 																						// Security Provider
@@ -67,7 +71,7 @@ public class NoobChain {
 		System.out.println("\nWalletA's balance is: " + walletA.getBalance());
 		System.out.println("WalletB's balance is: " + walletB.getBalance());
 
-		isChainValid();		
+		isChainValid();	
 	}
 
 	public static void mainForDay2(){
@@ -78,10 +82,11 @@ public class NoobChain {
 		walletB = new Wallet();
 
 		//Test public and private keys
-		System.out.println("Private and public keys:");
+		System.out.println("WalletA's Private and public keys:");
 		System.out.println(StringUtil.getStringFromKey(walletA.privateKey));
 		System.out.println(StringUtil.getStringFromKey(walletA.publicKey));
 		//Create a test transaction from WalletA to walletB 
+		// A->B. 5 coins
 		Transaction transaction = new Transaction(walletA.publicKey, walletB.publicKey, 5, null);
 		transaction.generateSignature(walletA.privateKey);
 		//Verify the signature works and verify it from the public key
