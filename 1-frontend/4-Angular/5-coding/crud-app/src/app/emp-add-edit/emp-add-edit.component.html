@@ -1,32 +1,32 @@
-<div mat-dialog-title>
-    <h1>Employee Form</h1>
-</div>
-<div mat-dialog-content class="content">
-    <div class="row">
-        <mat-form-field appearance="outline">
-            <mat-label>姓</mat-label>
-            <input matInput type="text" placeholder="Placeholder">
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-            <mat-label>名</mat-label>
-            <input matInput type="text" placeholder="Placeholder">
-        </mat-form-field>
+<div mat-dialog-title>Title1</div>
+<form action="" [formGroup]="empForm" (ngSubmit)="formSubmit()">
+  <div mat-dialog-content class="content">
+      <div class="row">
+          <mat-form-field appearance="outline">
+              <mat-label>First name</mat-label>
+              <input matInput placeholder="Chen" formControlName="firstName">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Last name</mat-label>
+              <input matInput placeholder="William" formControlName="lastName">
+            </mat-form-field>
+      </div>
+      <div class="row">
+          <mat-form-field appearance="outline">
+              <mat-label>E-mail</mat-label>
+              <input matInput placeholder="30000000@qq.com" formControlName="email">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Telephone</mat-label>
+              <input matInput placeholder="135000000" formControlName="phone">
+            </mat-form-field>
+      </div>
 
-    </div>
-    <div class="row">
-        <mat-form-field appearance="outline">
-            <mat-label>email</mat-label>
-            <input matInput type="text" placeholder="Placeholder">
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-            <mat-label>phone</mat-label>
-            <input matInput type="text" placeholder="Placeholder">
-        </mat-form-field>
-    
-    </div>
+  </div>
 
-</div>
-<div mat-dialog-actions>
-    <button mat-raised-button>Cancel</button>
-    <button mat-raised-button color="primary">Save</button>
-</div>
+  <div mat-dialog-actions class="action">
+      <button mat-raised-button color="primary" type="submit">Save</button>
+      <button mat-raised-button>Cancel</button>
+  </div>
+
+</form>
