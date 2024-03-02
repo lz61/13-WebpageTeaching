@@ -13,15 +13,18 @@ export class EmpAddEditComponent {
 
   constructor(private formBuilder: FormBuilder, private employeeService: EmployeeService) { 
     this.empForm = this.formBuilder.group({
-      firstName:'',
-      lastName: '',
+      firstname:'',
+      lastname: '',
       email:'',
       phone:'',
     })
   }
 
   formSubmit(){
-    this.employeeService.addEmployee(this.empForm.value).subscribe( (response)=> {} );
+    console.log(this.empForm.value);
+    this.employeeService.addEmployee(this.empForm.value).subscribe( (response)=> {
+      console.log(response);
+    } );
   }
 
 }

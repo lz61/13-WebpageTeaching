@@ -6,9 +6,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EmployeeService {
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  addEmployee(data:any){
-    return this.httpClient.post('http://localhost:3000/employees',data);
+  addEmployee(data: any) {
+    // 三部分
+    // poest方法
+    // 路径: http://localhost:8080/mployees
+    // data: json字符块, firstname,lastname,email,phone
+    return this.httpClient.post('http://localhost:8080/employees', data);
   }
 }

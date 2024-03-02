@@ -1,4 +1,4 @@
-# 0. 安装node16.14.2, npm8.5.0
+# 1. 安装node16.14.2, npm8.5.0
 
 如果下载过慢,可以设置镜像源:
 
@@ -36,15 +36,20 @@ nvm&rarr;node和npm&rarr;Angular/CLI
 
 如果有外网:
 
-clash/ v2ray for linux?
+clash/v2ray for linux?
 
 Reference: chatGPT
 
 1.Install nvm:
 
 ```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-curl -o- https://gitee.com/mirrors/nvm/raw/v0.38.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash (稍微等一下就好)
+```
+
+检验(新开一个终端):
+
+```
+nvm -v
 ```
 
 2.Install Node.js 16.14.2:
@@ -69,6 +74,20 @@ npm -v // should be 8.5.0
 ```
 
 5.Install Angular CLI:
+
+如果在中国国内,最好用如下命令先换源再下载:
+
+```
+npm config set registry http://mirrors.cloud.tencent.com/npm/
+```
+
+顺带: 获得本机npm registry地址方式:
+
+```
+npm config get registry
+```
+
+Install:
 
 ```
 npm install -g @angular/cli@16.0.1
@@ -191,7 +210,7 @@ ng serve
 http://localhost:4200/
 ```
 
-### 1.1.6-获得运行页面
+### 1.1.6 获得运行页面
 
 ![image-20230511165331779](Pics/image-20230511165331779.png)
 
