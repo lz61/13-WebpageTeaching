@@ -9,7 +9,16 @@ npm config set registry http://mirrors.cloud.tencent.com/npm/
 npm config set registry https://registry.npm.taobao.org
 ```
 
-## 0.1 windows version
+如果需要切换版本,可以用:
+
+```
+nvm list // 查看所有版本
+nvm use [版本名num] // 切换到指定版本
+```
+
+切换.
+
+## 0.1 windows Node下载
 
 LTS-Long-Term Support
 
@@ -26,7 +35,7 @@ node -v
 npm -v
 ```
 
-## 0.2 Linux version
+## 0.2 Linux Node下载
 
 无外网: Workaround: 下载.tar.gz文件,解压到对应文件夹,再将nvm挂载到系统路径.
 
@@ -223,9 +232,9 @@ Angular工作区就是你开发应用的上下文环境。
 ng new angular-learning
 ```
 
-`ng new` 会提示你要把哪些特性包含在初始的应用项目中。请按回⻋接受默认值。
+`ng new` 会提示你要把哪些特性包含在初始的应用项目中。请按回车接受默认值。
 
-Angular CLI会安装必要的Angular npm包及其它依赖。这可能要花几分钟。
+Angular CLI(脚手架)会安装必要的Angular npm包及其它依赖。这可能要花几分钟。
 
 ### 1.3.2 启动开发服务器
 
@@ -252,3 +261,4 @@ angular官方网站教程-教你做一个简单商业网站
 app.module.ts
 
 控制整个app包的导入和使用
+
