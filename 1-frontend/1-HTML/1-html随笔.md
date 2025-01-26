@@ -4,6 +4,7 @@ my-first-html:
 
 ```
 <html>
+	<head> </head>
 	<body>
 		<h1>我的第一个标题</h1>
 		<p>我的第一个段落</p>
@@ -15,20 +16,51 @@ my-first-html:
 
 https://www.runoob.com/html/html-tutorial.html
 
-3.css的用处: 美化html页面.
-
-4.css: 内联css
-
-5.css教程网址: https://www.runoob.com/css/css-tutorial.html
-
-6.内联css:
+3.html文件基本格式:
 
 ```
 <html>
-    <body style="background-color: yellow;">
-        <h2 style="background-color: red;">二级标题</h2>
-        <p style="background-color: green;"> 段落</p>
-    </body>
+	<head> </head>
+	<body> </body>
 </html>
 ```
 
+4.html元素对:
+
+```
+<x> ... </x>
+```
+
+5.在html中添加多行注释:
+
+```
+<!-- 注释内容 -->
+```
+
+6.html元素属性:
+
+实例:
+
+```
+<a href="www.bing.com">跳转到bing.com</a>
+```
+
+属性语法:
+
+```
+name="value"
+```
+
+属性塞入html元素的方法:
+
+```
+<x 属性1 属性2 ...> ... </x>
+```
+
+7.撰写网页时常用的属性:
+
+title="hint" // 在鼠标悬停时显示hint中的内容
+
+8.
+
+属性Reference: https://www.runoob.com/html/html-attributes.html
