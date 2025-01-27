@@ -40,7 +40,7 @@ css的最小组成单位: "属性:值;"
 可以有多对属性值.
 ```
 
-5.内联样式:
+5.内联样式(head-css):
 
 回顾: html文件的基本格式:
 
@@ -51,7 +51,7 @@ css的最小组成单位: "属性:值;"
 </html>
 ```
 
-css样式负责写在html中的
+head-css样式负责写在html中的
 
 ```
 <head> ... </head>
@@ -59,7 +59,7 @@ css样式负责写在html中的
 
 里面.
 
-6.内联样式实例:
+6.内联样式(head-css)实例:
 
 ```
 <html>
@@ -80,12 +80,21 @@ css样式负责写在html中的
 </html>
 ```
 
-7.普通选择器、id选择器、class选择器
+
+
+7.内联样式(head-css)语法:
+
+```
+选择器{css-code}
+```
+
+三种选择器: 普通选择器、id选择器、class选择器
 
 普通选择器: 选择html的普遍元素,如:
 
 ```
 h1{color:aqua;}
+p{color:red;}
 # 格式:
 元素名{css-code}
 ```
@@ -93,8 +102,8 @@ h1{color:aqua;}
 id选择器:
 
 ```
-#id{
-	color:aqua
+#idName{
+	color:aqua;
 }
 ```
 
@@ -102,7 +111,7 @@ class选择器:
 
 ```
 .className{
-	
+	css-code
 }
 ```
 
@@ -110,9 +119,39 @@ class选择器:
 
 8.外部样式
 
+代码位置:
+
+```
+    <head>
+        <link rel="stylesheet" href="css_webpage.css">
+    </head>
+```
+
+css_webpage.css中的内容:
+
+同head-css中的内容.
+
+例如:
+
+```
+h1{
+	color:aqua;
+}
+p{
+	color:red;
+}
+```
+
+
+
 
 
 参考链接:
 
 1.css教程网址: https://www.runoob.com/css/css-tutorial.html
 
+问题:
+
+1.css的三种选择器?
+
+2.

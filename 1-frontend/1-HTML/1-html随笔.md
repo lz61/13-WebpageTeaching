@@ -72,10 +72,8 @@ title = "hint"
 
 7.撰写网页时常用的属性:
 
-title="hint" // 在鼠标悬停时显示hint中的内容
-
 ```
-<p title="hint"> </p>
+<p title="hint"> </p> // 在鼠标悬停时显示hint中的内容
 ```
 
 该元素在鼠标移动到其上面时会显示hint.
