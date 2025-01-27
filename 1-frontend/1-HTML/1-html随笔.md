@@ -1,4 +1,4 @@
-1.html: 
+1.html:
 
 my-first-html:
 
@@ -37,18 +37,31 @@ https://www.runoob.com/html/html-tutorial.html
 <!-- 注释内容 -->
 ```
 
+vscode快速添加注释: Ctrl+/
+
 6.html元素属性:
 
 实例:
 
 ```
-<a href="www.bing.com">跳转到bing.com</a>
+<a href="http://www.bing.com">跳转到bing.com</a>
 ```
+
+注意不能是
+
+```
+www.bing.com,会报错.
+```
+
+
 
 属性语法:
 
 ```
 name="value"
+# 实例: 
+href = "www.bing.com"
+title = "hint"
 ```
 
 属性塞入html元素的方法:
@@ -61,6 +74,13 @@ name="value"
 
 title="hint" // 在鼠标悬停时显示hint中的内容
 
+```
+<p title="hint"> </p>
+```
+
+该元素在鼠标移动到其上面时会显示hint.
+
 8.
 
 属性Reference: https://www.runoob.com/html/html-attributes.html
+
