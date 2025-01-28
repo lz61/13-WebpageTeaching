@@ -53,14 +53,21 @@ vscode快速添加注释: Ctrl+/
 www.bing.com,会报错.
 ```
 
+得是:
+
+```
+http://www.bing.com
+```
+
 
 
 属性语法:
 
 ```
 name="value"
+属性名="属性值"
 # 实例: 
-href = "www.bing.com"
+href = "http://www.bing.com"
 title = "hint"
 ```
 
@@ -68,21 +75,21 @@ title = "hint"
 
 ```
 <x 属性1 属性2 ...> ... </x>
+实例:
+<a href="http://www.bing.com" title="hint">跳转到bing.com</a>
 ```
 
 7.撰写网页时常用的属性:
 
 ```
-<p title="hint"> </p> // 在鼠标悬停时显示hint中的内容
+<p title="hint"> </p> // 在鼠标悬停时显示双引号中的内容,即hint
 ```
 
-该元素在鼠标移动到其上面时会显示hint.
-
-8.
+作用: 该元素在鼠标移动到其上面时会显示hint.
 
 属性Reference: https://www.runoob.com/html/html-attributes.html
 
-9.html元素和标签名: 定义划分
+9.html**元素**和**标签**名: 定义划分
 
 标签名:
 

@@ -1,6 +1,6 @@
 # 0. 安装node16.14.2, npm8.5.0
 
-如果下载过慢,可以设置镜像源:
+Linux:如果下载过慢,可以设置镜像源:
 
 ```
 # 腾讯源:
@@ -20,20 +20,24 @@ nvm use [版本名num] // 切换到指定版本
 
 ## 0.1 windows Node下载
 
-LTS-Long-Term Support
+名词解释: LTS-Long-Term Support
 
-1.**Download Node.js Installer:**
+A.下载Node.js安装包: 
 
-https://nodejs.org/en/blog/release/v16.14.2
+website: https://nodejs.org/en/blog/release/v16.14.2
 
-2.**Verify Installation:**
+B.安装
 
-After the installation is complete, open a new terminal or command prompt and run the following commands to verify that Node.js and npm (Node Package Manager) are installed:
+C.验证安装
+
+进入cmd:
 
 ```
 node -v
 npm -v
 ```
+
+
 
 ## 0.2 Linux Node下载
 
@@ -93,8 +97,6 @@ ng version
 
 # 1. Angular起步
 
-(我的远程Linux实在太拉跨了)
-
 ## 1.1 安装Angular CLI,版本:16.0.1
 
 ### 1.1.1 Angular CLI简述
@@ -131,7 +133,7 @@ ng version
 
 ![image-20230624103908102](Pics/image-20230624103908102.png)
 
-只有16.14.2的node版本可以,18.16.0的node版本无法正常下载并安装node-CLI
+注: 只有16.14.2的node版本可以,18.16.0的node版本无法正常下载并安装node-CLI
 
 ## 1.2 部署项目demo
 

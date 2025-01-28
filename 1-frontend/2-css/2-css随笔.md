@@ -10,9 +10,8 @@ html代码组成了页面的骨架,而css负责美化html中的内容.
 
 ```
 <html>
-    <body style="background-color: yellow;">
-        <h2 style="background-color: red;">二级标题</h2>
-        <p style="background-color: green;"> 段落</p>
+    <body>
+        <h2 style="color:red;">二级标题</h2>
     </body>
 </html>
 ```
@@ -21,7 +20,7 @@ html代码组成了页面的骨架,而css负责美化html中的内容.
 
 ```
 <body style="background-color: yellow;"> ... </body>
-<body style="background-color: yellow;color:red"> ... </body>
+<body style="background-color: yellow; color:red"> ... </body>
 ```
 
 在html元素的基础上,增加了:
