@@ -82,3 +82,43 @@ title = "hint"
 
 属性Reference: https://www.runoob.com/html/html-attributes.html
 
+9.html元素和标签名: 定义划分
+
+标签名:
+
+```
+<x> ... </x>
+```
+
+中的x.
+
+例如,p和h1都是标签名.
+
+元素:
+
+```
+<x> ... </x>
+```
+
+整体是一个元素.
+
+例如:
+
+```
+<p> Hello World!</p>
+```
+
+是一个元素.
+
+10.常用html元素:
+
+A.
+
+```
+<br>
+```
+
+作用: 换行
+
+B.
+

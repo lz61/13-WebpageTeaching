@@ -127,6 +127,12 @@ class选择器:
     </head>
 ```
 
+vscode输入方式:
+
+```
+link+你想要的css地址.
+```
+
 css_webpage.css中的内容:
 
 同head-css中的内容.
