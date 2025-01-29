@@ -1,6 +1,26 @@
-1.三种结构化程序: 顺序，选择，循环.
+1.编写一个程序,实现符号函数:
 
-2.if语句的基本形式:
+当用户输入正数时输出1.当用户输入0时输出0.当用户输入负数时输出-1.
+
+代码段:
+
+```
+var x;
+x=prompt("实现sgn函数");
+if(x>0){
+	console.log("1");
+}
+else if(x==0){
+	console.log("0");
+}
+else if(x<0){
+	console.log("-1");
+}
+```
+
+
+
+1.if语句的基本形式:
 
 ```
 if(条件判断){
@@ -34,10 +54,10 @@ if(x>0)
 
 ```
 if(x>0){
-	printf("x是一个正数");
+	console.log("x是一个正数");
 }
 else{
-	printf("x不是正数");
+	console.log("x不是正数");
 }
 ```
 
@@ -45,20 +65,17 @@ else{
 
 ```
 if(x>0){
-	printf("x是一个正数");
+	console.log("x是一个正数");
 }
 else if(x==0){
-	printf("x=0");
+	console.log("x=0");
 }
 ```
 
-5.
+5.题目1.
 
 ```
-var a=12;
-var b=-34;
-var c=56;
-var min=0;
+var a=12,b=-34,c=56,min=0;
 min=a;
 if(min>b){
 	min=b;
@@ -75,6 +92,8 @@ console.log(min);
 
 7.
 
+补教: && ! ||
+
 ![image-20250121182100650](Pics/image-20250121182100650.png)
 
 答案:
@@ -90,10 +109,9 @@ console.log(min);
 		payment = hour * 3;
 	}
 	else{
-		payment = hour * 2.5;
+		payment = 150+ (hour-50) * 2.5;
 	}
 	console.log(payment);
-}
 ```
 
 8.switch分支结构:(js不重要,不用学)
@@ -101,7 +119,7 @@ console.log(min);
 基本形式:
 
 ```
-switch(判断变量){
+switch(待判断变量){
 	case 常量1:
 		...
 		break;
@@ -116,6 +134,8 @@ switch(判断变量){
 }
 ```
 
+变量会匹配对应的常量,并执行语句直到遇到break.
+
 9.switch语句注意点
 
 ![image-20250128091333310](Pics/image-20250128091333310.png)
@@ -126,6 +146,16 @@ switch(判断变量){
 
 ```
 var x=1,y=0,a=0,b=0;
+switch(x){
+	case 1:
+		a++;
+		b++;
+		a++;
+		break;
+	case 2:
+		a++;
+		b++;
+}
 ```
 
 
@@ -133,5 +163,7 @@ var x=1,y=0,a=0,b=0;
 ![image-20250121182835671](Pics/image-20250121182835671.png)
 
 11.
+
+如下的百分制成绩默认输入整数.
 
 ![image-20250121183014524](Pics/image-20250121183014524.png)

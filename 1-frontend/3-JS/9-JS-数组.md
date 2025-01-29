@@ -35,17 +35,15 @@ int main(void){
 4.使用数组: 大幅简化程序撰写复杂度
 
 ```
-int main(void){
-	var x[10]={0};
-	int sum=0;
-	for(int i=0;i<10;i++){
-		scanf("%d",&x[i]);
-	}
-	for(int i=0;i<10;i++){
-		sum+=x[i];
-	}
-	printf("sum is %d\n",sum);
+var x=new Array(10);
+var sum=0;
+for(var i=0;i<10;i++){
+	x[i]=prompt("输入第",i,"个数的值");
 }
+for(var i=0;i<10;i++){
+	sum+=x[i];
+}
+console.log("sum=",sum);
 ```
 
 5.数组的特性
@@ -56,10 +54,12 @@ B.数组的元素是连续存放的.
 
 C.数组通过下标来访问元素,下标从0开始.
 
+
+
 6.实例:
 
 ```
-int arr[5]={1,2,3,4,5};
+var arr={1,2,3,4,5};
 ```
 
 对应的下标:

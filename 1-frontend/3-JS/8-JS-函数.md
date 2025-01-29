@@ -1,7 +1,7 @@
 1.函数的定义与调用
 
 ```
-返回类型 函数名(变量列表){
+function 函数名(参数列表){
 	// do sth.
 	return ...;
 }
@@ -9,25 +9,36 @@
 
 2.定义的实例:
 
+实例1:使用返回值的函数
+
 ```
-#include <stdbool.h>
-bool isPrime(int n){
-	// do sth.
-	if(n==1) return False;
-	for(int i=2;i<n;i++){
+function test(){
+    return 1;
+}
+
+var x = test();
+console.log(x);
+```
+
+实例2:判断一个值是否为素数
+
+```
+function isPrime(n){
+	if(n==1) return false;
+	for(var i=2;i<n;i++){
 		if(n%i==0)
-			return False;
+			return true;
 	}
-	return True;
+	return true;
 }
 
 ```
 
-3.函数的调用(先定义后调用):
+3.函数的调用(js无所谓定义调用顺序,注意与C不同):
 
 ```
 int main(void){
-	int n=10;
+	var n=10;
 	if(isPrime(n)){
 		printf("n是素数\n");
 	}
@@ -37,32 +48,9 @@ int main(void){
 }
 ```
 
-5.另一种函数的使用方法: 先声明再调用,后实现
+4.数组与函数:等到了数组再讲.
 
-```
-bool isPrime(int n);
-int main(void){
-	...
-	isPrime(n);
-	...
-}
-
-bool isPrime(int n){
-	...
-}
-```
-
-4.传值调用与传址调用: 等到到了指针再讲.
-
-5.数组与函数:等到了数组再讲.
-
-6.![image-20250123084602214](Pics/image-20250123084602214.png)
-
-7.
-
-![image-20250123084615837](Pics/image-20250123084615837.png)
-
-8.
+8.(无视该内容)
 
 ![image-20250123084629790](Pics/image-20250123084629790.png)
 
@@ -70,8 +58,30 @@ bool isPrime(int n){
 
 ![image-20250123084641563](Pics/image-20250123084641563.png)
 
+请重新撰写一遍,并自行测试自己定义的函数是否正确.
+
 10.
 
 良好的函数命名方式:
 
 大驼峰命名法
+
+11.函数是否能改变传入的值?(不要乱动,目前默认是函数不能改变传入的值).
+
+以后会介绍函数到底能不能改变传入的值.
+
+答案: JS函数不能改变传入的值.
+
+测试代码:
+
+```
+function tryToChangeXButFailed(x){
+    x=2;
+}
+
+var x = 1;
+tryToChangeXButFailed(x);
+console.log(x); // 事实上还是输出1
+```
+
+注: 原理之后会解释,不过请不要尝试在js的函数中改变变量的值.
