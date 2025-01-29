@@ -38,8 +38,10 @@ int main(void){
 var x = new Array(10);
 var sum = 0;
 for (var i = 0; i < 10; i++) {
-    // 记得强制类型转换
+    // 记得强制类型转换.
+    // 重申1: prompt返回值的类型是String
     s = prompt("输入第", i, "个数的值")
+    // 重申2: Number()的强制类型转换函数
     x[i] = Number(s);
 }
 for (var i = 0; i < 10; i++) {
@@ -68,29 +70,30 @@ var arr=[1,2,3,4,5];
 
 6.每种数据结构的学习方式:
 
-学习: 创建,初始化,读取,修改.
+创建,初始化,读取,修改.
+
+四大天王.
 
 7.数组的声明与初始化(创建数组+数组赋值)
 
 声明:
 
 ```
-// 数组类型 数组名[数组大小];
-var x = new Array(n); // n为任意正整数,此时x中的值都是undefined
+var x = new Array(n); // n为任意正整数,此时x中的值都是undefined(没有初始化的数组内部值是undefined)
 var x = [1,2,3,4,5]; // 直接初始化x
 var x = []; // 声明一个长度为空的数组
 ```
 
 注1: 数组大小必须为正整数,且数组大小在初始化时已然确定.
 
-C.没有初始化: 数组没有默认值,和没有初始化的x一样,都是垃圾值.
+注2: 没有初始化的数组内部值是undefined.
 
-10.真题:
+10.真题1:
 
 ![image-20250129211141871](Pics/image-20250129211141871.png)
 
 ```
-A. var a=[1,2,3,];
+A. var a=[1,2,3],;
 B. var a={};
 C. var a=;
 D. var a=[1,2];
@@ -98,43 +101,58 @@ D. var a=[1,2];
 
 答案: D
 
-
-
-11.真题
-
-在JS中对一维整型数组的正确定义为:
-
-
-
-![image-20250123213123012](Pics/image-20250123213123012.png)
-
-答案:D
-
 12.数组元素的访问(access)
 
-```
-[array_name][下标]即可访问.
-```
-
-下标: 非负整数.
-
-下标越界: 导致undefined behavior(未定义行为).
+访问分为: 读取与修改.
 
 ```
-int a[n]; // 合法下标: 0-(n-1)
+通过[array_name][下标]即可访问.
+// 合法下标范围: 0~(n-1)的整数
+
+// 例:
+var a=[1,2,3];
+// 合法访问:
+a[0],a[2];
+
+// 不合法访问:
+a[-1],a[3]; // 下标越界:导致undefined behavior(未定义行为).
+```
+
+一维数组元素的修改与读取(均与变量保持一致)：
+
+修改:
+
+```
+var a = [1,2];
+a[0]=2; // 修改数组变量
+```
+
+读取:
+
+```
+console.log(a[0]); // 输出2
 ```
 
 
-
-![image-20250123213432044](Pics/image-20250123213432044.png)
 
 13.真题
 
-![image-20250123213523180](Pics/image-20250123213523180.png)
+![image-20250123213432044](Pics/image-20250123213432044.png)
+
+答案: D
+
+
+
+14.真题
+
+```
+var a=[1,4,7,10,2,5,8,11,3,6,9,12];
+A.10 B.9 C.6 D.5
+```
 
 答案: C
 
-14.总结:
+15.总结:
 
 A.一维数组的创建：声明与初始化
 
@@ -142,60 +160,48 @@ B.一维数组元素的访问（读取与修改)
 
 学习数据类型: 声明、初始化、读取、修改.
 
-15.二维数组: 
+或者可以说,是**创建**与**访问**.
 
-数组: **存储相同类型**的数据.
+16.一维数组真题
 
-二维数组: **存储一维数组**的数组.
-
-声明: 
-
-```
-基本数据类型 数组名[行数][列数];
-```
-
-注: 接在数组屁股后面的括号可以留空,其余数字必须存在.
-
-初始化:
-
-![image-20250123214925606](Pics/image-20250123214925606.png)
-
-16.真题
+要求: 直接输出即可,不需要接收用户输入.
 
 ![image-20250123215144267](Pics/image-20250123215144267.png)
 
 ```
 // 输入:
 1.2 7 5 1.8 1.6 0.8 4 1.0 6 2.2
-int main(void){
-	float sum = 0;
-	float average = 0;
-	float a[10]={0};
-	for(int i=0;i<10;i++){
-		scanf("%f",&a[i]);
-	}
-	for(int i=0;i<10;i++){
+// 代码:
+
+// 1.申请变量
+	var sum = 0, average = 0, a = [1.2,7,5,1.8, 1.6, 0.8, 4, 1.0, 6, 2.2];
+
+// 2.处理用户输入: 不用处理
+
+// 3.程序内部逻辑
+	for(var i=0;i<10;i++){
 		sum+=a[i];
 	}
 	average = sum / 10;
-	float lessThanAverage[10]={0};
-	int index = 0 ;
-	for(int i=0;i<10;i++){
+	var lessThanAverage=new Array(10);
+	// index用于记录小于平均值的元素在数组lessThanAverage中的最大下标,index=最大下标+1
+	var index = 0 ;
+	for(var i=0;i<10;i++){
 		if(a[i]<average){
-			lessThanAverage[i]=a[index];
+			// 注意:i和index不要写反
+			lessThanAverage[index]=a[i];
 			index++;
 		}	
 	}
-	// index为实际有效的index+1
+
+// 4.输出答案
+	// index为实际有效的最大下标+1
 	// 输出平均值
-	printf("average is %f\n",average);
+	console.log("average is %f\n",average);
 	// 输出小于平均值的元素
-    for(int i=0;i<index;i++){
-    	printf("Element is %f\n",lessThanAverage[i]);
+    for(var i=0;i<index;i++){
+    	console.log("Element is %f\n",lessThanAverage[i]);
     }
-}
-
-
 ```
 
 显示:
