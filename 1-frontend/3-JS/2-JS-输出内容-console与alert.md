@@ -55,3 +55,17 @@ console支持同时输出多个变量类型的变量,但有时会导致奇怪的
 console.log("x=",x);
 ```
 
+5.JS结合逗号与占位符
+
+```
+// 例2: console.log结合逗号与占位符
+console.log("%d",1); // 输出1
+```
+
+6.console.log多个参数(使用占位符)
+
+```
+// 例3: console.log多个参数
+console.log("%d %d",1,2); // 输出"1 2"(不包含双引号)
+```
+

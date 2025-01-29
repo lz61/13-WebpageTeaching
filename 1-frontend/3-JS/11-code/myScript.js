@@ -1,11 +1,11 @@
-var x= {1,2,3,4,5};
-var sum = 0;
-for (var i = 0; i < 1; i++) {
-    s = "输入第" + (i+1) + "个数的值";
-    x[i] = prompt(s);
-    console.log(typeof(x[i]));
+var jiSum=0,ouSum=0;
+for(var i=1;i<=1000;i++){
+    if(i%2==0){
+        ouSum+=i;
+    }
+    else{
+        jiSum+=i;
+    }
 }
-for (var i = 0; i < 1; i++) {
-    sum = sum + x[i];
-}
-console.log("sum=", sum);
+var result = ouSum-jiSum;
+console.log("result=",result);

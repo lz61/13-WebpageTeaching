@@ -29,9 +29,16 @@ console.log("1");
 while(expression){
 	// do sth.
 }
+
+//
+var i=1;
+while(i<=10){
+	console.log("1");
+	i++;
+}
 ```
 
-4.for循环
+3.for循环
 
 ```
 for(declaration;judgment;do sth.){
@@ -40,7 +47,7 @@ for(declaration;judgment;do sth.){
 
 // example(循环执行10次):
 for(var i=0;i<10;i++){
-
+	// do sth.
 }
 
 // 等价于:
@@ -65,13 +72,15 @@ break: 立即退出循环
 
 continue: 无视本次循环的剩余语句,立即进入下一次循环.
 
+
+
 6.实例: break和continue
 
 ```
 for(var i=0;i<10;i++){
 	if(i==3)
 		break;
-	console.log("The value of i is %d\n",i);
+	console.log(i);
 }
 // 输出: 0,1,2
 
@@ -128,11 +137,10 @@ console.log("你想说的话");
 
 ```
 // 申请变量
-var n=0;
-var sum=0;
+var n=0,sum=0;
 
 // 读取用户输入
-scanf("%d",&n);
+n=prompt("请输入n");
 
 // 内部处理逻辑
 for(var i=0;i<n;i++){
@@ -151,7 +159,7 @@ console.log("sum=",sum);
 // 申请变量
 var sum=0;
 // 处理用户输入
-// 不用处理
+// 没有输入,不用处理
 // 内部处理逻辑
 for(var i=1;i<=100;i++){
 	if(i%3==0){

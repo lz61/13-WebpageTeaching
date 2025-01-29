@@ -42,11 +42,11 @@ if(x>0){
 ```
 // 正确的
 if(x>0)
-	printf("x是正数");
+	console.log("x是正数");
 
 // 如果是两个语句:
 if(x>0)
-	printf("x是正数");
+	console.log("x是正数");
 	x--; // x--会被默认执行
 ```
 

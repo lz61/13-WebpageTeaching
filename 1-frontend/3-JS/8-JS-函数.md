@@ -16,7 +16,8 @@ function test(){
     return 1;
 }
 
-var x = test();
+var x = test(); // x=1
+// 可以看到,和prompt()函数很类似.
 console.log(x);
 ```
 
@@ -31,20 +32,17 @@ function isPrime(n){
 	}
 	return true;
 }
-
 ```
 
 3.函数的调用(js无所谓定义调用顺序,注意与C不同):
 
 ```
-int main(void){
-	var n=10;
-	if(isPrime(n)){
-		printf("n是素数\n");
-	}
-	else{
-		printf("n不是素数\n");
-	}
+var n=10;
+if(isPrime(n)){
+	console.log("n是素数");
+}
+else{
+	console.log("n不是素数");
 }
 ```
 
@@ -54,7 +52,7 @@ int main(void){
 
 ![image-20250123084629790](Pics/image-20250123084629790.png)
 
-9.
+9.真题1.
 
 ![image-20250123084641563](Pics/image-20250123084641563.png)
 
@@ -64,9 +62,11 @@ int main(void){
 
 良好的函数命名方式:
 
-大驼峰命名法
+驼峰命名法
 
-11.函数是否能改变传入的值?(不要乱动,目前默认是函数不能改变传入的值).
+函数、变量名一般使用小驼峰命名法.
+
+11.函数是否能改变传入的值?(不要乱动传入的值,目前学过的数据类型中,默认是函数不能改变传入的值).
 
 以后会介绍函数到底能不能改变传入的值.
 
