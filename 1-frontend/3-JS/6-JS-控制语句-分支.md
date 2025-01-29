@@ -30,10 +30,6 @@ if(x>0)
 	x--; // x--会被默认执行
 ```
 
-附2:
-
-if内嵌套的
-
 3.if+else:
 
 ```
@@ -56,19 +52,26 @@ else if(x==0){
 }
 ```
 
-5.分号与语句结尾
+5.
 
-![image-20250121181615334](Pics/image-20250121181615334.png)
+```
+var a=12;
+var b=-34;
+var c=56;
+var min=0;
+min=a;
+if(min>b){
+	min=b;
+}
+if(min>c){
+	min=c;
+}
+console.log(min);
+```
 
-答案: B
+问运行结果?
 
-注意语句结尾的分号(何时该加,何时不该加).
-
-6.
-
-![image-20250121182036263](Pics/image-20250121182036263.png)
-
-min=-34.
+答案: min=-34.
 
 7.
 
@@ -77,11 +80,9 @@ min=-34.
 答案:
 
 ```
-#include <stdio.h>
-int main(void){
-	unsigned hour = 0;
-	scanf("%d",&hour);
-	float payment = 0;
+	var hour = 0;
+	hour = prompt("Input hour:");
+	var payment = 0;
 	if(hour<=10){
 		payment = 30;
 	}
@@ -91,11 +92,11 @@ int main(void){
 	else{
 		payment = hour * 2.5;
 	}
-	printf("总的上网费用为%f",payment);
+	console.log(payment);
 }
 ```
 
-8.switch分支结构:(js不重要)
+8.switch分支结构:(js不重要,不用学)
 
 基本形式:
 

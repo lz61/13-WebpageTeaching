@@ -1,12 +1,4 @@
-// function displayDate() {
-//     document.getElementById("demo").innerHTML = Date();
-// }
-var sum = 5;
-switch (sum) {
-    case 5:
-        console.log("5");
-        break;
-
-    default:
-        break;
-}
+var a = 10;
+var b = (a++, a + 3, a - 3);
+// 申请变量并输出: 可以与字符串拼接
+console.log("b=", b);
