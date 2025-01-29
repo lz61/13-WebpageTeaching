@@ -23,7 +23,7 @@
 
 三种方式: body-js,head-js,外部的js.
 
-A.写在本文件的body里面的js代码(body-js)
+A. body-js: 写在本文件的body里面的js代码
 
 ```
 <html>
@@ -37,6 +37,8 @@ A.写在本文件的body里面的js代码(body-js)
 ```
 
 不推荐.
+
+原因: 容易导致js代码与html代码混淆.
 
 B.写在head里面.
 
