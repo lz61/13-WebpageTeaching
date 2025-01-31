@@ -60,22 +60,7 @@ var y = "123"; // y隐式具有string类型
 
 4.ts变量名的命名条件
 
-A.变量名可以以字母或下划线开头.
-
-B.后续字符可以是字母,数字,下划线.
-
-C.变量名区分大小写.
-
-```
-var a:number = 1;
-var A:number = 2;
-console.log(a)
-console.log(A)
-```
-
-D.不能与保留字冲突.
-
-保留字实例: var,console这种字符串.
+同js.
 
 
 
@@ -112,7 +97,31 @@ var x; // x此时是undefined
 
 E. null: 空对象,即什么都没有.
 
+因为null类型的变量只能被申请为null的值,所以以下三句话等价.
 
+```
+var x:null = null;
+var x = null;
+var x:null;
+```
+
+
+
+F.区分: null类型和undefined类型?
+
+```
+null类型: 用户手动设置其为null,是故意的.
+undefined类型: 用户"犯错了",才会出来undefined值,是不小心.
+
+实例:
+1.产生null类型的代码:
+
+2.产生undefined类型变量的代码:
+```
+
+
+
+G. any: 任意类型,事实上与js的默认var类型一致.
 
 6.ts变量: 强制类型转换.
 
