@@ -83,12 +83,8 @@ console.log("sum=", sum);
 4.数组的创建与初始化
 
 ```
-var x = new Array(2);
-var x = new Array(n); // n为任意正整数,此时x中的值都是undefined(没有初始化的数组内部值是undefined)
+var x = new Array(2); // 括号中的参数2可以为任意正整数,此时x中的值都是undefined(没有初始化的数组内部值是undefined)
 var x = [1,2,3,4,5]; // 直接初始化x
-var x = []; // 声明一个长度为空的数组
-和
-var x = new Array(0); 等价
 ```
 
 数组元素个数=数组长度=数组大小.
@@ -96,6 +92,17 @@ var x = new Array(0); 等价
 注1: 数组的长度必须为正整数,且数组长度在初始化时已然确定.
 
 注2: 没有初始化的数组内部值是undefined.
+
+5.真题1.
+
+请用new和[]的方式申明长度为空的数组.
+
+答案:
+
+```
+var x = [];
+var x = new Array(0);
+```
 
 
 
