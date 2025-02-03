@@ -2,24 +2,6 @@
 
 2.看一些有区别的代码:
 
-A.赋值语句的区别
-
-JS常见写法:
-
-```
-var x = 1;
-x="123"; // 没问题
-```
-
-TS常见错误:
-
-```
-var x = 1;
-x="123"; // 错误,因为x已默认成为了number类型变量,不能给number类型变量赋string类型值.
-```
-
-
-
 B.关系运算符: 
 
 JS的常见错误(Don't be too clever):
@@ -60,11 +42,22 @@ if(1<x<2){
 
 ts不允许隐式强制类型转化.
 
+定义: 强制类型转化: 将A类型的值转化为B类型.
+
 
 
 C.用ts实现如下题目:
 
 ![image-20250130143007571](Pics/image-20250130143007571.png)
+
+注1: 每小时3元与每小时2.5元均为超过对应小时的小时数,例如:
+
+```
+时间=60h时,计算方式为:
+30+3*40+10*2.5=175元
+```
+
+
 
 答案:
 
@@ -93,4 +86,28 @@ D.用ts实现如下题目2:
 ![image-20250121183014524](Pics/image-20250121183014524.png)
 
 注1:百分制成绩: 默认输入整数.
+
+```
+var score = 0;
+var rank = '';
+
+score = Number(prompt("Please input your score"));
+if(score>=90){
+	rank = "A";
+}
+else if(score>=80){
+	rank = 'B';
+}
+else if(score>=70){
+	rank = 'C';
+}
+else if(score>=60){
+	rank = 'D';
+}
+else{
+	rank = 'E';
+}
+
+console.log("rank is",rank);
+```
 

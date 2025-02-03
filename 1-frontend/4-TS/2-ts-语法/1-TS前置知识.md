@@ -68,7 +68,7 @@ tsc test.ts --watch
 
 实时编译的定义: 一旦test.ts中的内容有所更改,立刻重新编译test.ts,重新将test.ts中的内容变成新的test.js的内容.
 
-4.联动尝试:
+5.联动尝试:
 
 html代码:
 
