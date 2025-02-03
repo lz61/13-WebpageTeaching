@@ -1,6 +1,6 @@
 # 1. 安装node16.14.2, npm8.5.0
 
-如果下载过慢,可以设置镜像源:
+如果npm下载过慢,可以设置镜像源:
 
 ```
 # 腾讯源:
@@ -18,13 +18,17 @@ nvm use [版本名num] // 切换到指定版本
 
 切换.
 
-## 0.1 windows Node16.14.2下载
+## 1.1 windows Node16.14.2下载
 
 方法1: 使用nvm下载node(推荐)
 
 1.下载nvm
 
 Reference:https://github.com/coreybutler/nvm-windows/releases
+
+地址:
+
+![image-20250202164354398](Pics/image-20250202164354398.png)
 
 下载nvm-setup.exe
 
@@ -46,11 +50,15 @@ nvm --version
 nvm list-remote
 ```
 
+(这句命令是垃圾,豆包坑我.)
+
 下载16.14.2版本:
 
 ```
 nvm install 16.14.2
 ```
+
+正常速度: 5min以内.
 
 使用该版本:
 

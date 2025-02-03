@@ -1,3 +1,5 @@
+牢记: 依然是"创初读修".
+
 1.如何创建变量(创)
 
 TS:可以在申请变量时指定变量类型.
@@ -12,15 +14,15 @@ var y : string;
 var x ; // 最好不要这样写,虽然可以通过语法检查,但x的类型隐式为any,即任意类型的值,不好规范语法,写到后面自己都不知道x是什么类型的变量
 ```
 
-初始化语法:
+语法:
 
 ```
-var [varName] : [varType1] | [varType2] ...;
+var [varName] : [varType1] ;
 ```
 
 注1: 又称varName为变量名,varType为变量类型.
 
-注2: 在ts中number和Number有区别,string和String也有区别.
+注2: 在ts中number和Number有区别,string和String也有区别.(注意首字母大小写.)
 
 注3: 一个变量在ts中可以有多种类型,如下:
 
@@ -28,9 +30,15 @@ var [varName] : [varType1] | [varType2] ...;
 var x: number | string; // x既可以是number也可以是string.
 ```
 
+此时的语法为:
 
+```
+var [varName] : [varType1] | [varType2] ...;
+```
 
-目前请只用小写字母开头的变量类型.
+目前请只用小写字母开头的变量类型来申请变量,即使用string,number而非String,Number申请变量.
+
+之后会解释原因.
 
 
 
@@ -64,7 +72,7 @@ var y = "123"; // y隐式具有string类型
 
 
 
-5.ts变量的内置类型(所有的varType)
+5.ts变量的内置类型,也称基本类型.(所有的varType)
 
 A. number类型
 
@@ -110,18 +118,28 @@ var x:null;
 F.区分: null类型和undefined类型?
 
 ```
-null类型: 用户手动设置其为null,是故意的.
-undefined类型: 用户"犯错了",才会出来undefined值,是不小心.
+null类型: 用户手动设置其为null,是"故意的".
+undefined类型: 用户"犯错了",才会出来undefined值,是"不小心".
+```
 
-实例:
-1.产生null类型的代码:
+G.题目1.
 
-2.产生undefined类型变量的代码:
+申请两个变量,一个值为null,一个为undefined,并输出.
+
+答案:
+
+```
+var x = null;
+var y;
+console.log(x);
+console.log(y);
 ```
 
 
 
-G. any: 任意类型,事实上与js的默认var类型一致.
+H. any: 任意类型,事实上与js的默认var类型一致.
+
+
 
 6.ts变量: 强制类型转换.
 
