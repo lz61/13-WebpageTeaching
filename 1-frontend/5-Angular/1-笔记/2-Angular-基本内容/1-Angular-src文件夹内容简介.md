@@ -20,8 +20,6 @@ app.module.ts: 导入项目所需要的模块,控制整个app包的导入和使�
 
 A.app.component.css:修饰B的内容.
 
-
-
 B.app.component.html:页面的骨架.
 
 C.app.component.spec.ts:不用管,默认内容.
@@ -30,7 +28,7 @@ D.app.component.ts:管理html页面的ts代码,类似js代码.
 
 
 
-3.src/assets文件夹:
+4.src/assets文件夹:
 
 放一些项目需要的资源,比如项目需要的图片(Car.png)
 
