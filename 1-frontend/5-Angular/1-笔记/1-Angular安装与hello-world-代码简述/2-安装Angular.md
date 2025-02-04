@@ -4,12 +4,14 @@ A.Angular CLI: 用于管理Angular代码的程序,负责将Angular代码转换�
 
 B.安装Angular CLI:
 
+进入命令行(win+R, cmd):
+
 ```
 指定版本:
 npm install -g @angular/cli@16.0.1
 解释:
 -g: global,指的是全局安装.
-不指定版本(不推荐):
+不指定版本的安装方式(不推荐):
 npm install -g @angular/cli
 ```
 

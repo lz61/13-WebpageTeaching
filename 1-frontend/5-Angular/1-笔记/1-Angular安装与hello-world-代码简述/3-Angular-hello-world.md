@@ -2,13 +2,15 @@
 
 A.Angular新建项目
 
+cmd:
+
 ```
 ng new [projectName]
 // 实例:
-ng new 1-crud-app
+ng new test
 ```
 
-新建一个名为crud-app的项目.
+新建一个名为test的项目.
 
 选择:
 
@@ -48,7 +50,7 @@ F.获得运行页面
 
 
 
-G.也可以:
+G.在使用Angular运行项目时,也可以:
 
 ```
 ng serve --open
