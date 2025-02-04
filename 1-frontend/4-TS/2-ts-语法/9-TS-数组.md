@@ -7,9 +7,9 @@
 A.数组声明:
 
 ```
-var x = new Array(n); // x中的元素可以是任意类型
-var a: number[] ; // a中的元素必须是数值型
-var b: string[] ; // b中的元素必须是字符串类型
+var x = new Array(n); // x中的元素可以是任意类型的数据
+var a: number[] ; // a中的元素必须是数值型数据
+var b: string[] ; // b中的元素必须是字符串类型数据
 ```
 
 B.数组初始化

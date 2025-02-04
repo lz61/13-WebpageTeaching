@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent {
+    x = 1;
+    // constructor(){
+    //   this.x=2;
+    // }
+
 
 }

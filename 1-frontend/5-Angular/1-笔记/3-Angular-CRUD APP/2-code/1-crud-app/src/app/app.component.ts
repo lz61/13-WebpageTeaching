@@ -9,6 +9,6 @@ export class AppComponent {
   title = '1-crud-app';
 
   openDialog(){
-    console.log("Open Dialog!");
+    // console.log("Open Dialog!");
   }
 }

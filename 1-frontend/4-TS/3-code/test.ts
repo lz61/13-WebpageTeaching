@@ -1,19 +1,22 @@
-var student = {
-    name: "初音未来",
-    scores: [1, 2, 3, 4, 5],
+function getNum(input) {
+    var x = new Array(3);
+    x[2] = input % 10; // 个位数
+    x[1] = ((input - x[2]) / 10) % 10;
+    x[0] = (input - x[1] * 10 - x[2]) / 100;//百位数
+    return x;
 }
 
-function calculateAverageScore(student): any {
-    var sum = 0;
-    for (var i = 0; i < student.scores.length; i++) {
-        sum += student.scores[i];
+// getNum之前定义过了
+
+function outputNum() {
+    // 输出所有的答案
+    for (var i = 100; i <= 999; i++) {
+        // 调用getNum
+        var x = getNum(i);
+        if ((x[0] * x[0] * x[0] + x[1] * x[1] * x[1] + x[2] * x[2] * x[2]) == i) {
+            console.log(i);
+        }
     }
-    var averageScore = sum / student.scores.length;
-    student.averageScore = averageScore;
-    return student
 }
 
-student = calculateAverageScore(student);
-
-// 输出一个对象中的所有内容
-console.log(JSON.stringify(student));
+outputNum();

@@ -11,10 +11,10 @@ ng g c test
 语法:
 
 ```
-ng g c [componentName]
+ng g c [newComponentName]
 ```
 
-解释:
+语法解释:
 
 ng: Angular命令标志
 
@@ -32,9 +32,19 @@ ng serve
 
 的时候生成新元素,很容易卡住.
 
+即生成新元素前,最好先把`ng serve`停掉.
 
 
-2.使用`app-routing.module.ts`控制路由:
+
+2.简单看一下TestComponent:
+
+主要构成:
+
+![image-20250204094940582](Pics/image-20250204094940582.png)
+
+
+
+3.使用`app-routing.module.ts`控制路由:
 
 A.先将`app.component.html`中的内容替换为:
 
@@ -42,13 +52,13 @@ A.先将`app.component.html`中的内容替换为:
 <router-outlet></router-outlet>
 ```
 
-效果: 其中塞的html元素是程序员指定的.
+效果: 其中塞的html元素是程序员指定的,在特定路由里面会显示特定的元素.
 
 B.在`app-routing.module.ts`中设定路由:
 
 复习: ts数组与js对象.
 
-格式: 数组,其中每个对象都是指定的路由.
+routes格式: 数组,其中每个对象都是指定的路由.
 
 语法
 
@@ -93,3 +103,5 @@ D.总结:
 ```
 
 并将`app-routing.module,ts`中的const route: Routes换成我们自定义的数组+对象形式,我们可以指定在访问某些页面时,显示我们自定义的Angular元素.
+
+这就叫"Angular的动态路由".
