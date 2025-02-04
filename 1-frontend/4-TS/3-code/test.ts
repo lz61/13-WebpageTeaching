@@ -1,21 +1,19 @@
-var score = 0;
-var rank = '';
-
-score = Number(prompt("Please input your score"));
-if (score >= 90) {
-    rank = "A";
-}
-else if (score >= 80) {
-    rank = 'B';
-}
-else if (score >= 70) {
-    rank = 'C';
-}
-else if (score >= 60) {
-    rank = 'D';
-}
-else {
-    rank = 'E';
+var student = {
+    name: "初音未来",
+    scores: [1, 2, 3, 4, 5],
 }
 
-console.log("rank is", rank);
+function calculateAverageScore(student): any {
+    var sum = 0;
+    for (var i = 0; i < student.scores.length; i++) {
+        sum += student.scores[i];
+    }
+    var averageScore = sum / student.scores.length;
+    student.averageScore = averageScore;
+    return student
+}
+
+student = calculateAverageScore(student);
+
+// 输出一个对象中的所有内容
+console.log(JSON.stringify(student));
