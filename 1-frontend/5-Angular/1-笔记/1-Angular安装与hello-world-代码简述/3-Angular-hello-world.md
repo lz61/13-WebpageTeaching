@@ -1,6 +1,18 @@
 2.新建项目demo并运行
 
-A.Angular新建项目
+建议提前用如下命令:
+
+```
+npm config set registry http://mirrors.cloud.tencent.com/npm/
+```
+
+进行国内的npm换源.
+
+记得换源后重启电脑.
+
+注: 如果不国内换源,可能下载了10min后依然无法下载成功.
+
+A. Angular新建项目
 
 cmd:
 
@@ -19,6 +31,8 @@ ng new test
 等待项目自动创建即可.
 
 等待: 5min左右.
+
+
 
 期待:
 

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { EmpAddEditComponent } from './emp-add-edit/emp-add-edit.component';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = '1-crud-app';
 
+  dialog: MatDialog;
+
+  constructor(dialog:MatDialog){
+    this.dialog = dialog;
+  }
+
   openDialog(){
     // console.log("Open Dialog!");
+    this.dialog.open(EmpAddEditComponent);
   }
 }

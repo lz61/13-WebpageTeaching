@@ -1,3 +1,5 @@
+(ng new [projectName])
+
 1.回到我们新建的项目文件夹下,打开vscode.
 
 2.运行命令(添加Angular Material):
