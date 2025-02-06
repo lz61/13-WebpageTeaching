@@ -4,7 +4,8 @@
 <div mat-dialog-title>这是一个对话框</div>
 <div mat-dialog-content>这是对话框的内容。</div>
 <div mat-dialog-actions>
-    <button mat-button mat-dialog-close>关闭</button>
+    <button mat-raised-button>取消</button>
+    <button mat-raised-button color="primary">保存</button>
 </div>
 ```
 
@@ -101,9 +102,11 @@ A.每行放两个.
     </div>
 ```
 
+目标: 让员工输入姓和名.
 
 
-B.调整两个对话框间距.
+
+B.调整两个对话框间距(增加间隔).
 
 在.css中:
 
@@ -120,4 +123,3 @@ B.调整两个对话框间距.
 
 
 
-C.

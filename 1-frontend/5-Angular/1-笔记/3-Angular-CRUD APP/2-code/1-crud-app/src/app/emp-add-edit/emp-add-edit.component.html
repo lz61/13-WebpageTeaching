@@ -1,20 +1,19 @@
-<div mat-dialog-title>这是一个对话框</div>
+<div mat-dialog-title>添加员工</div>
 <div mat-dialog-content>
-    <div class="row">
+    <form [formGroup]="employeeForm">
+        <div class="row">
             <mat-form-field>
                 <mat-label>First Name</mat-label>
-                <input matInput>
+                <input matInput formControlName="firstName">
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Last Name</mat-label>
-                <input matInput>
+                <input matInput formControlName="lastName">
             </mat-form-field>
-    </div>
-    <!-- <mat-form-field>
-        <mat-label>Input</mat-label>
-        <input matInput>
-    </mat-form-field> -->
+        </div>
+    </form>
 </div>
 <div mat-dialog-actions>
-    <button mat-raised-button mat-dialog-close>关闭</button>
+    <button mat-raised-button mat-dialog-close>Cancel</button>
+    <button mat-raised-button mat-dialog-close color="primary" (click)="onSave()" >Save</button>
 </div>
