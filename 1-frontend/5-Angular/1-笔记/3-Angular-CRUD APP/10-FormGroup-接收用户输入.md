@@ -1,4 +1,4 @@
-原本的代码:
+原本的用于展示页面的代码:
 
 ```
 <div class="row">
@@ -15,7 +15,7 @@
 
 
 
-1.现在用户可以在FormBuilder中输入内容,但是问题是: 我们要如何读取用户的输入?
+1.现在用户可以在`<input matInput>`中输入内容,但是问题是: 我们要如何读取用户的输入?
 
 2.使用FormGroup对用户输入的内容进行管理.
 
@@ -50,8 +50,8 @@ B.在html中申请FormGroup.
   <form [formGroup]="employeeForm">
     <div class="row">
 		...
-		<input matInput formControlName="firstName"> // 需要修改
-		<input matInput formControlName="lastName"> // 需要修改
+		<input matInput formControlName="firstName"> // 本行需要修改
+		<input matInput formControlName="lastName"> // 本行需要修改
     </div>
   </form>
 ```
